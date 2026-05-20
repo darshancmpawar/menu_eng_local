@@ -1,0 +1,23 @@
+{
+  "Tekion": [
+    {
+      "name": "tekion_no_mushroom",
+      "type": "ingredient_ban",
+      "ingredients": ["mushroom"]
+    },
+    {
+      "name": "tekion_liquid_rice_once",
+      "type": "item_frequency",
+      "base_slot": "rice",
+      "selector": { "flag": "is_liquid_rice" },
+      "min_per_week": 1,
+      "max_per_week": 1
+    },
+    {
+      "name": "tekion_nonveg_mwf",
+      "type": "slot_day_restriction",
+      "base_slot": "nonveg_main",
+      "allowed_weekdays": ["mon", "wed", "fri"]
+    }
+  ]
+}

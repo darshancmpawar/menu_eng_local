@@ -1,0 +1,45 @@
+{
+  "clients": [
+    {"name": "Rippling", "menu_category": "menu_cat_4"},
+    {"name": "Tekion", "menu_category": "menu_cat_1"},
+    {"name": "Odessia", "menu_category": "menu_cat_2"},
+    {"name": "Vector", "menu_category": "menu_cat_3"},
+    {"name": "Scalar", "menu_category": "menu_cat_5"},
+    {"name": "Clario", "menu_category": "menu_cat_6"},
+    {"name": "Tessolve", "menu_category": "menu_cat_7"},
+    {"name": "Stryker", "menu_category": "menu_cat_1"},
+    {"name": "Cargil", "menu_category": "menu_cat_3"},
+    {"name": "Ikea", "menu_category": "menu_cat_8"},
+    {"name": "H&M", "menu_category": "menu_cat_1"},
+    {"name": "Konsberg", "menu_category": "menu_cat_1"},
+    {"name": "Moengage", "menu_category": "menu_cat_9"},
+    {"name": "Stripe", "menu_category": "menu_cat_9"},
+    {"name": "Semiens Technologies North", "menu_category": "menu_cat_10"},
+    {"name": "Semiens Technologies South", "menu_category": "menu_cat_11"},
+    {"name": "Semiens Technologies Non veg", "menu_category": "menu_cat_12"},
+    {"name": "Citrix", "menu_category": "menu_cat_2"}
+  ],
+  "menu_categories": {
+    "menu_cat_1": ["bread", "veg_dry", "rice", "veg_gravy", "nonveg_main", "dal", "sambar", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "salad"],
+    "menu_cat_2": ["bread", "veg_dry", "rice", "veg_gravy", "nonveg_main", "dal", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "welcome_drink", "salad"],
+    "menu_cat_3": ["bread", "veg_dry", "rice", "veg_gravy", "dal", "sambar", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "welcome_drink"],
+    "menu_cat_4": ["bread", "veg_dry", "welcome_drink", "rice", "veg_gravy", "nonveg_main", "soup", "dal", "sambar", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert"],
+    "menu_cat_5": ["bread", "veg_dry", "rice", "veg_gravy", "nonveg_main", "dal", "sambar", "starter", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "welcome_drink"],
+    "menu_cat_6": ["bread", "veg_dry", "rice", "veg_gravy", "nonveg_main", "dal", "sambar", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "welcome_drink", "healthy_rice"],
+    "menu_cat_7": ["bread", "veg_dry", "rice", "veg_gravy", "dal", "sambar", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "welcome_drink", "healthy_rice"],
+    "menu_cat_8": ["bread", "veg_dry", "rice", "veg_gravy", "dal", "sambar", "nonveg_main", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "salad"],
+    "menu_cat_9": ["bread", "veg_dry", "rice", "veg_gravy", "dal", "sambar", "nonveg_main", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "welcome_drink"],
+    "menu_cat_10": ["bread", "veg_dry", "rice", "veg_gravy", "sambar", "rasam", "white_rice", "papad", "pickle", "dessert"],
+    "menu_cat_11": ["bread", "veg_dry", "rice", "veg_gravy", "dal", "papad", "pickle", "curd_side", "dessert", "welcome_drink"],
+    "menu_cat_12": ["bread", "veg_dry", "rice", "veg_gravy", "dal", "sambar", "nonveg_main", "rasam", "white_rice", "papad", "pickle", "curd_side", "dessert", "salad"]
+  },
+  "slot_count_overrides": {
+    "Rippling": {"veg_dry": 2},
+    "Stripe": {"nonveg_main": 2},
+    "Moengage": {"nonveg_main": 2}
+  },
+  "core_min_one_slots": ["bread", "rice", "starter", "veg_dry", "welcome_drink", "curd_side", "nonveg_main", "veg_gravy"],
+  "constant_slots": ["white_rice", "papad", "pickle", "chutney"],
+  "fallback_menu_category": "menu_cat_3",
+  "theme_overrides": {}
+}

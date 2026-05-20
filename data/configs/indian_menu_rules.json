@@ -1,0 +1,79 @@
+{
+  "description": "Complete menu rules for Indian lunch menu planning — matches old app rule set",
+  "rules": [
+    {
+      "name": "item_cooldown_20d",
+      "type": "item_cooldown",
+      "cooldown_days": 20
+    },
+    {
+      "name": "ricebread_gap_10d",
+      "type": "ricebread_gap",
+      "gap_days": 10
+    },
+    {
+      "name": "theme_cuisine_filter",
+      "type": "theme_slot_filter",
+      "exempt_slots": [
+        "welcome_drink", "dal", "sambar", "rasam",
+        "starter", "soup", "salad", "healthy_rice"
+      ]
+    },
+    {
+      "name": "unique_items_session",
+      "type": "unique_items",
+      "scope": "session"
+    },
+    {
+      "name": "monday_mix",
+      "type": "theme_day"
+    },
+    {
+      "name": "deep_fried_coupling",
+      "type": "coupling"
+    },
+    {
+      "name": "curd_raita_logic",
+      "type": "curd_side",
+      "pulao_subcats": [
+        "south_veg_pulao", "north_simple_veg_pulao",
+        "north_rich_pulao", "millet_pulao", "mixed_grain_pulao"
+      ]
+    },
+    {
+      "name": "premium_limits",
+      "type": "premium",
+      "max_per_day": 1,
+      "min_per_horizon": 1,
+      "max_per_horizon": 2
+    },
+    {
+      "name": "welcome_drink_no_repeat_color",
+      "type": "welcome_drink_color"
+    },
+    {
+      "name": "no_repeat_weeks",
+      "type": "week_signature_cooldown",
+      "cooldown_days": 30
+    },
+    {
+      "name": "prefer_theme_starters",
+      "type": "theme_starter_preference",
+      "bonus_weight": 1000000
+    },
+    {
+      "name": "penalize_non_theme_fallback",
+      "type": "theme_fallback_penalty",
+      "penalty": 2000000
+    },
+    {
+      "name": "prefer_nonveg_dry_slot2",
+      "type": "nonveg_dry_preference"
+    },
+    {
+      "name": "nonveg_biryani_once_per_week",
+      "type": "nonveg_biryani_weekly",
+      "max_per_week": 1
+    }
+  ]
+}
