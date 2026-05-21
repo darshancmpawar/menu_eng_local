@@ -38,6 +38,5 @@ streamlit>=1.30,<2.0
 streamlit-cookies-controller>=0.0.3,<1.0
 
 # Auth / persistence
-supabase>=2.0,<3.0
 bcrypt>=4.0,<6.0
 python-dotenv>=1.0,<2.0
