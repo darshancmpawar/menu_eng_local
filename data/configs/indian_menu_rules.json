@@ -4,7 +4,7 @@
     {
       "name": "item_cooldown_20d",
       "type": "item_cooldown",
-      "cooldown_days": 20
+      "cooldown_days": 18
     },
     {
       "name": "ricebread_gap_10d",
