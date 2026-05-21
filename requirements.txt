@@ -1,0 +1,43 @@
+# Runtime dependencies for Ikigai Masala.
+#
+# Pinning strategy: lower bound = version the code was written against,
+# upper bound = next major. This catches breaking changes without
+# forcing a lock-step upgrade for every patch release. Exact versions
+# are intentionally avoided so security patches can land without a
+# requirements.txt bump.
+
+# Data pipeline
+pandas>=2.0,<4.0
+numpy>=1.24,<3.0
+openpyxl>=3.1,<4.0
+
+# Solver
+ortools>=9.8,<10.0
+
+# Web / API
+flask>=3.0,<4.0
+flask-cors>=4.0,<7.0
+itsdangerous>=2.0,<3.0
+requests>=2.31,<3.0
+
+# Streamlit frontend
+streamlit>=1.30,<2.0
+# Cookie manager — used to persist the bearer token across hard
+# refreshes / new tabs so a user's session survives Streamlit-process
+# restarts. Plain st.session_state is in-RAM only and dies whenever
+# Streamlit rebuilds the connection.
+#
+# We use streamlit-cookies-controller (not extra-streamlit-components)
+# because the latter writes cookies via document.cookie inside its
+# component iframe, which on Streamlit Cloud sits at a DIFFERENT
+# origin (qjmnz4vd2y0.streamlit.app) than the main app
+# (yourapp.streamlit.app) — so the cookie ends up on the iframe's
+# domain and the main app never sees it. streamlit-cookies-controller
+# uses postMessage to ask the parent window to set the cookie, which
+# lands it on the right origin.
+streamlit-cookies-controller>=0.0.3,<1.0
+
+# Auth / persistence
+supabase>=2.0,<3.0
+bcrypt>=4.0,<6.0
+python-dotenv>=1.0,<2.0
