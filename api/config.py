@@ -31,11 +31,6 @@ MIN_TIME_LIMIT_SECONDS = 10
 MAX_TIME_LIMIT_SECONDS = 600
 
 # ---------------------------------------------------------------------------
-# Supabase
-# ---------------------------------------------------------------------------
-SUPABASE_TIMEOUT_SECONDS = int(os.getenv("SUPABASE_TIMEOUT_SECONDS", "10"))
-
-# ---------------------------------------------------------------------------
 # Auth (kept for api/auth.py backward-compat; not required by the app)
 # ---------------------------------------------------------------------------
 API_SECRET_KEY = os.getenv("API_SECRET_KEY", "")
@@ -49,7 +44,7 @@ _APP_TZ = os.getenv("APP_TZ", "Asia/Kolkata")
 # ---------------------------------------------------------------------------
 # Required environment variables (checked at startup)
 # ---------------------------------------------------------------------------
-REQUIRED_ENV_VARS = ["SUPABASE_URL", "SUPABASE_KEY", "API_SECRET_KEY"]
+REQUIRED_ENV_VARS = ["API_SECRET_KEY"]
 
 
 def _get_env(name: str) -> str:
