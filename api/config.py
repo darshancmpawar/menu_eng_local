@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import datetime as dt
 import os
+import secrets
 
 # ---------------------------------------------------------------------------
 # File paths
@@ -33,7 +34,7 @@ MAX_TIME_LIMIT_SECONDS = 600
 # ---------------------------------------------------------------------------
 # Auth (kept for api/auth.py backward-compat; not required by the app)
 # ---------------------------------------------------------------------------
-API_SECRET_KEY = os.getenv("API_SECRET_KEY", "")
+API_SECRET_KEY = os.getenv("API_SECRET_KEY", "") or secrets.token_hex(32)
 API_TOKEN_TTL_SECONDS = int(os.getenv("API_TOKEN_TTL_SECONDS", str(24 * 3600)))
 
 # ---------------------------------------------------------------------------
@@ -44,7 +45,7 @@ _APP_TZ = os.getenv("APP_TZ", "Asia/Kolkata")
 # ---------------------------------------------------------------------------
 # Required environment variables (checked at startup)
 # ---------------------------------------------------------------------------
-REQUIRED_ENV_VARS = ["API_SECRET_KEY"]
+REQUIRED_ENV_VARS = []
 
 
 def _get_env(name: str) -> str:
